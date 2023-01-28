@@ -1,14 +1,22 @@
 import getPokemonImageUrl from "../../core/utils/getPokemonImageUrl";
 import Pokemon from "../../types/Pokemon";
+import click from "../../resources/sounds/click.mp3";
 
 type Props = {
   pokemon: Pokemon;
   pokemonId: number;
+  setSelectedPokemon: (pokemon: Pokemon) => void;
 };
 
-const PokeCard = ({ pokemon, pokemonId }: Props) => {
+const PokeCard = ({ pokemon, pokemonId, setSelectedPokemon }: Props) => {
+  const audio = new Audio(click);
+  const handleClick = () => {
+    setSelectedPokemon(pokemon);
+    audio.play();
+  };
+
   return (
-    <div className="pokecard">
+    <div className="pokecard" onClick={handleClick}>
       <img
         src={getPokemonImageUrl(pokemonId)}
         alt={`The pokemon ${pokemon.name}`}

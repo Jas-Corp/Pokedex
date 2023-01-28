@@ -27,6 +27,7 @@
 
   &__right {
     border-radius: 0px 30px 30px 0px;
+    @include flex-center;
   }
 }
 
@@ -54,5 +55,50 @@
     color: $black;
     font-size: 14px;
     font-weight: bold;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pokescreen {
+  width: 250px;
+  height: 220px;
+  background-color: white;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    100% 100%,
+    75% 100%,
+    20% 100%,
+    0 80%
+  );
+  border-radius: 20px;
+  @include flex-center;
+  align-items: flex-start;
+
+  &__display {
+    margin-top: 30px;
+    width: 90%;
+    height: 60%;
+    background-color: $display;
+    border-radius: 10px;
+    @include flex-center;
+    flex-direction: column;
+    padding: 10px;
+
+    &__name {
+      color: white;
+      font-family: "Satisfy", cursive;
+    }
+    &__types {
+      color: white;
+      text-transform: uppercase;
+      font-family: "Roboto", cursive;
+      font-size: 10px;
+      font-weight: bold;
+    }
   }
 }
