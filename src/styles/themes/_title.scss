@@ -1,0 +1,9 @@
+.title {
+  font-family: "pokemon";
+  font-size: 3rem;
+  color: white;
+
+  &-black {
+    color: $black;
+  }
+}
