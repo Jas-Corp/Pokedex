@@ -8,8 +8,10 @@ type Props = {
   setSelectedPokemon: (pokemon: Pokemon) => void;
 };
 
+// The PokeCard component is a child of the PokeList component.
 const PokeCard = ({ pokemon, pokemonId, setSelectedPokemon }: Props) => {
   const audio = new Audio(click);
+
   const handleClick = () => {
     setSelectedPokemon(pokemon);
     audio.play();

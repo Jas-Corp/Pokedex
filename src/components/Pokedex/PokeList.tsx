@@ -5,6 +5,7 @@ type Props = {
   pokemons: Pokemon[];
   setSelectedPokemon: (pokemon: Pokemon) => void;
 };
+// List of ALl Pokemon Fetch from API
 const PokeList = ({ pokemons, setSelectedPokemon }: Props) => {
   return (
     <div className="pokelist">

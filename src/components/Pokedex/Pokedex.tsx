@@ -6,6 +6,7 @@ import PokeScreen from "./PokeScreen";
 type Props = {
   pokemons: Pokemon[];
 };
+// The global Pokedex component
 const Pokedex = ({ pokemons }: Props) => {
   if (pokemons.length === 0) return <div>Loading...</div>;
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon>(pokemons[0]);

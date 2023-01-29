@@ -6,12 +6,16 @@ import PokemonData from "../../types/PokemonData";
 type Props = {
   pokemon: Pokemon;
 };
+
+// Display the selected pokemon type and image
 const PokeScreen = ({ pokemon }: Props) => {
   const [pokemonData, setPokemonData] = useState<PokemonData>();
+
   const loadPokemonData = async () => {
     const pokemonData = await getPokemonData(pokemon.url);
     setPokemonData(pokemonData);
   };
+
   useEffect(() => {
     loadPokemonData();
   }, [pokemon]);
