@@ -12,7 +12,7 @@ This is a **fake project** made **for my portfolio.**
 
 | Title | Pokemon Solid |
 | ----- | ------------- |
-| Text  | Unbounded     |
+| Text  | cursive       |
 
 </td><td>
 
