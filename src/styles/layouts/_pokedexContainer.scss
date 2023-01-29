@@ -4,4 +4,9 @@
   width: 70%;
   height: 700px;
   border-radius: 10px;
+  @include littlePhone {
+    background-color: #f1f1f100;
+    width: 100vw;
+
+  }
 }

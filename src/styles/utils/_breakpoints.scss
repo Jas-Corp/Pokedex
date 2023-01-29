@@ -1,0 +1,11 @@
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin littlePhone {
+  @media (max-width: $little-phone) {
+    @content;
+  }
+}

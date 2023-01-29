@@ -9,7 +9,6 @@ type Props = {
 const Pokedex = ({ pokemons }: Props) => {
   if (pokemons.length === 0) return <div>Loading...</div>;
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon>(pokemons[0]);
-  console.log(selectedPokemon);
 
   return (
     <div className="pokedex">

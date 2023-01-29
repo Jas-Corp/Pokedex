@@ -1,39 +1,69 @@
 .pokedex {
   display: flex;
+
   width: 100%;
   height: 100%;
+
+  padding: 60px;
+
   @include flex-center;
   align-items: flex-end;
-  padding: 60px;
+  @include phone {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   &__center {
-    background-color: $dark-red;
     height: 80%;
     min-width: 4px;
+    background-color: $dark-red;
+    @include phone {
+      display: none;
+    }
   }
-  &__left,
-  &__right {
-    background-color: $main-color;
-    min-width: 300px;
-    max-width: 300px;
-    height: 90%;
-  }
+
   &__left {
-    border-radius: 30px 0px 0px 30px;
     height: 80%;
+    border-radius: 30px 0px 0px 30px;
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
     @include flex-center;
     align-items: flex-end;
+    @include phone {
+      border-radius: 0px 0px 20px 20px;
+    }
   }
 
   &__right {
     border-radius: 0px 30px 30px 0px;
+    height: 90%;
     @include flex-center;
+    @include phone {
+      border-radius: 20px 20px 0px 0px;
+    }
+  }
+
+  &__left,
+  &__right {
+    background-color: $main-color;
+
+    min-width: 300px;
+    max-width: 300px;
+
+    @include littlePhone {
+      max-width: 100vw;
+      width: 90vw;
+    }
+
+    @include phone {
+      clip-path: none;
+    }
   }
 }
 
 .pokelist {
-  background-color: white;
   @include flex-center;
+
+  background-color: white;
   width: 80%;
   height: 70%;
   margin-bottom: 20px;
@@ -83,15 +113,15 @@
     margin-top: 30px;
     width: 90%;
     height: 60%;
-    background-color: $display;
+    padding: 10px;
     border-radius: 10px;
+    background-color: $display;
     @include flex-center;
     flex-direction: column;
-    padding: 10px;
 
     &__name {
       color: white;
-      font-family: "Satisfy", cursive;
+      font-family: cursive;
     }
     &__types {
       color: white;

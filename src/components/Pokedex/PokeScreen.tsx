@@ -16,8 +16,6 @@ const PokeScreen = ({ pokemon }: Props) => {
     loadPokemonData();
   }, [pokemon]);
 
-  console.log(pokemonData);
-
   return (
     <div className="pokescreen">
       <div className="pokescreen__display">
