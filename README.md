@@ -1,4 +1,3 @@
-
 # Pokedex
 
 **The pokedex** is a fake project developed in **React, Typescript, SASS** linked to the api https://pokeapi.co/
@@ -12,15 +11,15 @@ This is a **fake project** made **for my portfolio.**
 <tr><td>
 
 | Title | Pokemon Solid |
-| ----- | --------- |
-| Text  | Satisfy    |
+| ----- | ------------- |
+| Text  | Unbounded     |
 
 </td><td>
 
 | background | #e12929 |
-| --------- | ------- |
-| red | #e84947 |
-| black  | #232323 |
+| ---------- | ------- |
+| red        | #e84947 |
+| black      | #232323 |
 
 </td></tr> </table>
 
